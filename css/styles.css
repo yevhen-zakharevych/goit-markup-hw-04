@@ -8,7 +8,7 @@
   --color-primary: #4d5ae5;
   --color-accent: #e7e9fc;
   --color-light: #f4f4fd; /* cloud */
-  --color-active: #404bbf;
+  --color-active: #404bbf; /* ocean */
   --color-dark: #2e2f42; /* navy-blue */
   --color-success: #31d0aa;
   --color-white: #ffffff;
@@ -80,6 +80,8 @@ img {
 /* #region Header */
 .header {
   border-bottom: 1px solid var(--color-accent);
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -192,7 +194,7 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--color-active);
+  background-color: var(--color-primary);
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -259,7 +261,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px 0;
+  height: 112px;
   background-color: var(--color-light);
   margin-bottom: 8px;
 }
@@ -355,12 +357,12 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--color-active);
+  background-color: var(--color-primary);
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-member-social-link:hover {
-  background-color: var(--color-success);
+  background-color: var(--color-active);
 }
 
 .team-member-social-link svg {
@@ -441,7 +443,7 @@ img {
 .modal-close-btn {
   background-color: var(--color-accent);
   border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   width: 24px;
   height: 24px;
   display: flex;
@@ -452,6 +454,13 @@ img {
   top: 24px;
   right: 24px;
   padding: 0;
+}
+
+.modal-close-btn:focus,
+.modal-close-btn:hover {
+  background-color: var(--color-active);
+  fill: var(--color-white);
+  border-color: var(--color-active);
 }
 
 /* #endregion Studio Page */
